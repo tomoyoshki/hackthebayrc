@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+    <head>
+        <meta charset = "utf-8">
+        <title>Impact</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,500&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+        <script>
+            function openSlideMenu(){
+              document.getElementById('menu').style.width = '250px';
+              document.getElementById('slide').style.opacity = '0';
+              document.getElementById('menu').style.fontSize = '1.5vw';
+            }
+            function closeSlideMenu(){
+              document.getElementById('menu').style.width = '0';
+              document.getElementById('slide').style.opacity = '1';
+              document.getElementById('menu').style.fontSize = '0';
+            }
+            mybutton = document.getElementById("myBtn");
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+            function openTheMenu(){
+              document.getElementById('datamenu').style.width = '400px';
+              document.getElementById('datamenu').style.opacity = '1';
+              document.getElementById('theslide').style.opacity = '0';
+              document.getElementById('datamenu').style.fontSize = '1.5vw';
+            }
+            function closeTheMenu(){
+              document.getElementById('datamenu').style.width = '0';
+              document.getElementById('theslide').style.opacity = '1';
+              document.getElementById('datamenu').style.opacity = '0';
+              document.getElementById('datamenu').style.fontSize = '0';
+            }
+          </script>
+    </head>
+    <body>
+        <section class = top>
+            <div class="ti">Hack the Bay</div>
+            <div id="content">
+                <span id="slide">
+                  <a href="#" onclick="openSlideMenu()">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                </span>            
+                <div id="menu" class="nav">
+                  <a class="close" onclick="closeSlideMenu()">
+                    <i class="fas fa-times"></i>
+                  </a>
+                  <a href="index.html">Main</a>
+                  <a href="basicInfo.html">Basic Info</a>
+                  <a href="impact.html">Impact</a>
+                  <a href="data.html">Data Report</a>
+                  <a href="restoration.html">Restoration</a>
+                </div>
+                <span id="theslide">
+                  <button onclick="openTheMenu()" id="dataBtn" title="Open Slide Menu">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </span>  
+                <div id="datamenu" class="datanav">
+                  <a class="close" onclick="closeTheMenu()">
+                    <i class="fas fa-times"></i>
+                  </a>
+                  <a href="#overview" id="dataA" onclick="closeTheMenu()">Overview</a>
+                  <a href="#swimming" id="dataA" onclick="closeTheMenu()">Swimming</a>
+                  <a href="#ef" id="dataA" onclick="closeTheMenu()">Eating Fish</a>
+                  <a href="#al" id="dataA" onclick="closeTheMenu()">Aquatic Life</a>
+                  <a href="#acid" id="dataA" onclick="closeTheMenu()">Acidity</a>
+                  <a href="#bom" id="dataA" onclick="closeTheMenu()">Bacteria and Other Microbes</a>
+                  <a href="#ea" id="dataA" onclick="closeTheMenu()">Excess Algae</a>
+                  <a href="#lo" id="dataA" onclick="closeTheMenu()">Low Oxygen</a>
+                  <a href="#mw" id="dataA" onclick="closeTheMenu()">Murky Water</a>
+                  <a href="#np" id="dataA" onclick="closeTheMenu()">Nitrogen and Phosphorus</a>
+                  <a href="#pcb" id="dataA" onclick="closeTheMenu()">PCBs</a>
+                  
+                </div>
+              </div>
+        </section>
+        <section class = subtop>
+          <img class="indexPic" src="/image/ri1.jpg">
+          <img class="cover" src="/image/blackbg.jpg">
+          <div class="title">How is it impacting your community?</div>
+      </section>
+      <section class ="ioverview">
+        <div class="contentbox">
+            <h2 class= "titleText">How's my waterway</h2>
+            <p class = "text">
+              https://mywaterway.epa.gov/about
+            </p>
+        </div>
+        <img class="epa" href="https://www.epa.gov/aboutepa" src="/image/epa.png">
+    </section>
+    <section class="impactSection" id="overview">
+      <div class="result">
+        <h2 class="grade">D</h2>
+        <h2 class="name">Overview</h2>
+      </div>
+      <div class="detail">
+        <h2>Impaired Elements</h2>
+        <ul>
+          <li>
+            <a href="#acid">Acidity (click me)</a>
+            </li>
+          <li>
+            <a href="#bom">Bacteria and Other Microbes</a>
+            </li>
+          <li>
+            <a href="#ea">Excess Algae</a>
+            </li>
+          <li>
+            <a href="#lo">Low Oxygen</a>
+            </li>
+          <li>
+            <a href="#mw">Murky Water</a>
+            </li>
+          <li>
+            <a href="#np">Nitrogen and Phosphorus</a>
+            </li>
+          <li>
+            <a href="#pcb">PCBs</a>
+            </li>
+        </ul>
+      </div>
+    </section>
+    <section class="impactSection" id="swimming">
+      <div class="result">
+        <h2 class="grade">D</h2>
+        <h2 class="name">Swimming</h2>
+      </div>
+      <div class="detail">
+        <h2>Definition</h2>
+        <p>EPA, states, and tribes monitor and assess water quality to keep you safe while swimming and playing in or on the water. Water quality can change on very short notice. When deciding if it is safe to swim in a water body, refer to any local or state advisories.</p>
+      </div>
+    </section>
+    <section class="impactSection" id="ef">
+      <div class="result">
+        <h2 class="grade">D</h2>
+        <h2 class="name">Eating fish</h2>
+      </div>
+      <div class="detail">
+        <h2>Definition</h2>
+        <p>Eating fish and shellfish caught in impaired waters can pose health risks. For the Pimmit Run-Potomac River watershed, be sure to look for posted fish advisories or consult your local or state environmental health department for District of Columbia and Virginia.</p>
+      </div>
+    </section>
+    <section class="impactSection" id="al">
+      <div class="result">
+        <h2 class="grade">D</h2>
+        <h2 class="name">Aquatic Life</h2>
+      </div>
+      <div class="detail">
+        <h2>Definition</h2>
+        <p>Plants and animals depend on clean water. Impairments can affect the quality of water, which can have adverse effects on plants and animals living in the water. Due to the excess algae resulted from excessive nitrogen and phosphorus, the oxygen in this watershed is low that it cannot support the local aquatic life.</p>
+      </div>
+    </section>
+    <section class="restorationtop">
+      <h1 class="mtitle">Impaired elements definition and solution</h1>
+      <img src="/image/oi1.jpg" class="indexPic" alt="">
+    </section>
+    <section class="impactSection" id='acid'>
+      <div class="result">
+        <h2 class="name">Acidity</h2>
+      </div>
+      <div class="detail">
+        <h2>Definition</h2>
+        <p>Acidity (pH) outside a certain range can sicken or kill fish and other aquatic life. Highly acidic or alkaline water can also release pollutants from sediments that can further harm aquatic life. Acidity in waterways is influenced by rock and soils, as well as human sources such as industrial and car emissions, mining, and agricultural runoff.</p>
+        <h2>Solution</h2>
+        <p>People can help reduce pH problems by applying the correct amount of fertilizer on lawns (and avoiding application before wet weather events), properly disposing of chemicals such as household cleaners, and disposing any of the above to avoid ditches, waterways and storm drains.
+        </p>
+      </div>
+    </section>
+    <section class="impactSection" id='bom'>
+      <div class="result">
+        <h2 class="name">Bacteria and Other Microbes</h2>
+      </div>
+      <div class="detail">
+        <h2>Definition</h2>
+        <p>Bacteria and other microbes (pathogens) are potentially disease-causing organisms from human or animal waste that enter water from faulty septic systems, sewage discharges, farm and feedlot manure runoff, boat discharges, and pet waste. People can become ill by eating contaminated fish or shellfish or swimming in waters with high levels of these microbes.</p>
+        <h2>Solution</h2>
+        <p>People can help reduce pathogen contamination by practicing appropriate disposal of animal and boat waste and avoiding disposal in waterways, fixing leaky septic tanks, picking-up pet waste, and avoiding manure application close to shorelines or drainage ditches.
+        </p>
+      </div>
+    </section>
+    <section class="impactSection" id='ea'>
+      <div class="result">
+        <h2 class="name">Excess Algae</h2>
+      </div>
+      <div class="detail">
+        <h2>Definition</h2>
+        <p>Excess Algae can occur when excess nutrients, warm water temperatures, and reduced flow trigger the overgrowth of naturally occurring algae in the water. Blooms of algae can harm aquatic life by clogging fish gills, reducing oxygen levels, and smothering stream and lake beds and submerged vegetation. Some algae blooms can produce toxins that are harmful to human health, pets, wildlife, and livestock when touched, inhaled, or swallowed.</p>
+        <h2>Solution</h2>
+        <p>People can help reduce algae blooms in their local waters in the following ways: 
+          <ul>
+            <li> Use lawn and plant fertilizer sparingly and avoid application before wet weather events. </li>
+            <li>Regularly check and pump septic tanks.</li>
+            <li>Practice appropriate disposal of plant and animal waste and avoid disposal in waterways.</li>
+            <li>Dispose of pet waste in the trash.</li>
+            <li>Plant native plants to reduce excess nutrients entering waterways. </li>
+          </ul>
+        </p>
+      </div>
+    </section>
+    <section class="impactSection" id='lo'>
+      <div class="result">
+        <h2 class="name">Low Oxygen/Hypoxia</h2>
+      </div>
+      <div class="detail">
+        <h2>Definition</h2>
+        <p>Low Oxygen (oxygen depletion) levels in water can occur naturally for short periods, but when they are extreme or long-lasting, they can sicken and even kill fish and other aquatic life. Sewage wastewater, leaking septic tanks, farm and feedlot runoff, and stormwater runoff contain organic materials that decompose and use up oxygen in water.
+        </p>
+        <h2>Solution</h2>
+        <p>People can help by practicing appropriate disposal of plant and animal waste and avoiding disposal in waterways, applying the correct amount of fertilizer on lawns and avoiding application before wet weather events, disposing of pet waste in the trash, pumping-out septic tanks regularly, and pumping boat waste to an onshore facility.</p>
+      </div>
+    </section>
+    <section class="impactSection" id='mw'>
+      <div class="result">
+        <h2 class="name">Murky Water</h2>
+      </div>
+      <div class="detail">
+        <h2>Definition</h2>
+        <p>Murky Water (turbidity) refers to water that is cloudy, muddy or opaque (turbid) because of suspended soil particles, algae, microbes, or organic matter. These tiny particles can absorb heat and raise water temperatures, reduce oxygen for aquatic animals, reduce native aquatic plant growth, clog fish gills and smother fish eggs and aquatic insects.</p>
+        <h2>Solution</h2>
+        <p>Waterfront property owners can reduce turbidity by not removing streamside vegetation or channelizing streams, not filling wetlands or other waters, keeping natural shorelines intact, leaving some rocks, logs or native aquatic plants as cover for fish; and routing rainwater runoff to areas where it can soak in rather than runoff directly into a lake, stream, or sewer system. </p>
+      </div>
+    </section>
+    <section class="impactSection" id='np'>
+      <div class="result">
+        <h2 class="name">Nitrogen and Phosphorus</h2>
+      </div>
+      <div class="detail">
+        <h2>Definition</h2>
+        <p>Nitrogen and Phosphorus (nutrients) in excessive amounts can cause aquatic plants and microbes to grow too fast, choking waterways, causing potentially harmful algae blooms, and creating low oxygen conditions that can harm fish and other aquatic life.</p>
+        <h2>Solution</h2>
+        <p>People can help reduce nitrogen and phosphorus pollution in their local waters by using lawn and plant fertilizer sparingly and avoiding application before wet weather events, regularly checking and pumping-out septic tanks, practicing appropriate disposal of plant and animal waste and avoiding disposal in waterways, disposing of pet waste in the trash, pumping boat waste to an onshore facility, and planting native plants to prevent nutrient runoff into waterways.</p>
+      </div>
+    </section>
+    <section class="impactSection" id='pcb'>
+      <div class="result">
+        <h2 class="name">PCBs</h2>
+      </div>
+      <div class="detail">
+        <h2>Definition</h2>
+        <p>PCBs, or polychlorinated biphenyls, are a group of man-made organic chemicals with a range of toxicity. Although manufacturing of PCBs was banned in the U.S. in 1979, PCBs are long-lasting in fish tissue and in bottom-sediments of rivers and lakes. PCBs in fish that are eaten by humans and wildlife can build up and may have cancer-causing and other health effects. PCB contamination has caused many fishing bans and warnings.</p>
+        <h2>Solution</h2>
+        <p>Contact companies to clean up PCB in your local watershed</p>
+      </div>
+    </section>
+    <button onclick="topFunction()" id="topBtn" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    </body>
+
+</html>

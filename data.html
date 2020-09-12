@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+    <head>
+        <meta charset = "utf-8">
+        <title>Data Report</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,500&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script>
+            function openSlideMenu(){
+              document.getElementById('menu').style.width = '250px';
+              document.getElementById('slide').style.opacity = '0';
+              document.getElementById('menu').style.fontSize = '1.5vw';
+            }
+            function closeSlideMenu(){
+              document.getElementById('menu').style.width = '0';
+              document.getElementById('slide').style.opacity = '1';
+              document.getElementById('menu').style.fontSize = '0';
+            }
+           mybutton = document.getElementById("myBtn");
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+            function openTheMenu(){
+              document.getElementById('datamenu').style.width = '400px';
+              document.getElementById('datamenu').style.opacity = '1';
+              document.getElementById('theslide').style.opacity = '0';
+              document.getElementById('datamenu').style.fontSize = '1.5vw';
+            }
+            function closeTheMenu(){
+              document.getElementById('datamenu').style.width = '0';
+              document.getElementById('theslide').style.opacity = '1';
+              document.getElementById('datamenu').style.opacity = '0';
+              document.getElementById('datamenu').style.fontSize = '0';
+            }
+          </script>
+    </head>
+    <body>
+        <section class ="top">
+            <div class="ti">Hack the Bay</div>
+            <div id="content">
+                <span id="slide">
+                  <a href="#" onclick="openSlideMenu()">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                </span>            
+                <div id="menu" class="nav">
+                  <a class="close" onclick="closeSlideMenu()">
+                    <i class="fas fa-times"></i>
+                  </a>
+                  <a href="index.html">Main</a>
+                  <a href="basicInfo.html">Basic Info</a>
+                  <a href="impact.html">Impact</a>
+                  <a href="data.html">Data Report</a>
+                  <a href="restoration.html">Restoration</a>
+                </div>
+              </div>
+              <div id="dataContent">
+                <span id="theslide">
+                  <button onclick="openTheMenu()" id="dataBtn" title="Open Data List">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </span>            
+                <div id="datamenu" class="datanav">
+                  <a class="close" onclick="closeTheMenu()">
+                    <i class="fas fa-times"></i>
+                  </a>
+                  <a href="#clw" id="dataA" onclick="closeTheMenu()">Total Chloride</a>
+                  <a href="#din" id="dataA" onclick="closeTheMenu()">Dissolved Inorganic Nitrogen</a>
+                  <a href="#do" id="dataA" onclick="closeTheMenu()">Dissolved Oxygen</a>
+                  <a href="#doc" id="dataA" onclick="closeTheMenu()">Dissolved Organic Carbon</a>
+                  <a href="#don" id="dataA" onclick="closeTheMenu()">Dissolved Organic Nitrogen</a>
+                  <a href="#dop" id="dataA" onclick="closeTheMenu()">Dissolved Organic Phosphorus</a>
+                  <a href="#pH" id="dataA" onclick="closeTheMenu()">pH at 25 degrees C</a>
+                  <a href="#pn" id="dataA" onclick="closeTheMenu()">Particulate Nitrogen</a>
+                  <a href="#pp" id="dataA" onclick="closeTheMenu()">Particulate Phosphorus</a>
+                  <a href="#tssc" id="dataA" onclick="closeTheMenu()">Total Suspended Sediment Concentration</a>
+                  <a href="#wt" id="dataA" onclick="closeTheMenu()">Water Temperature</a>
+                  <a href="#tur" id="dataA" onclick="closeTheMenu()">Turbidity</a>
+                </div>
+              </div>
+        </section>
+        <section class = subtop>
+            <img class="indexPic" src="/image/wqp.jpg">
+            <img class="cover" src="/image/blackbg.jpg">
+            <div class="title">Water Quality Data</div>
+        </section>
+        <section class="dataGroup">
+          <img class="datacover" src="/image/blackbg.jpg">
+          <div class="theList">
+            <a href="#clw" class = "box">
+                <div class="imgBox">
+                    <img src="/image/twl.jpeg" class = "indexPic">
+                </div>
+                <div class="content">
+                    <h2>Total Chloride</h2>
+                </div>
+            </a>
+            <a href="#din" class = "box">
+                <div class="imgBox">
+                    <img src="/image/din.png" class = "indexPic">
+                </div>
+                <div class="content">
+                    <h2>Dissolved Inorganic Nitrogen</h2>
+                </div>
+            </a>
+            <a href="#do" class = "box">
+                <div class="imgBox">
+                    <img src="/image/do.jpg" class = "indexPic">
+                </div>
+                <div class="content">
+                    <h2>Dissolved Oxygen</h2>
+                </div>
+            </a>
+            <a href="#doc" class = "box">
+              <div class="imgBox">
+                  <img src="/image/doc.jpg" class = "indexPic">
+              </div>
+              <div class="content">
+                  <h2>Dissolved Organic Carbon</h2>
+              </div>
+          </a>
+          <a href="#don" class = "box">
+              <div class="imgBox">
+                  <img src="/image/on.jpg" class = "indexPic">
+              </div>
+              <div class="content">
+                  <h2>Dissolved Organic Nitrogen</h2>
+              </div>
+          </a>
+          <a href="#dop" class = "box">
+              <div class="imgBox">
+                  <img src="/image/op.jpg" class = "indexPic">
+              </div>
+              <div class="content">
+                  <h2>Dissolved Organic Phosphorus</h2>
+              </div>
+          </a>
+          <a href="#pH" class = "box">
+            <div class="imgBox">
+                <img src="/image/pH.jpg" class = "indexPic">
+            </div>
+            <div class="content">
+                <h2>pH at 25 degrees C</h2>
+            </div>
+        </a>
+        <a href="#pn" class = "box">
+            <div class="imgBox">
+                <img src="/image/pn.webp" class = "indexPic">
+            </div>
+            <div class="content">
+                <h2>Particulates Nitrogen</h2>
+            </div>
+        </a>
+        <a href="#pp" class = "box">
+            <div class="imgBox">
+                <img src="/image/pp.jpg" class = "indexPic">
+            </div>
+            <div class="content">
+                <h2>Particulates Phosphorus</h2>
+            </div>
+        </a>
+        <a href="#tssc" class = "box">
+          <div class="imgBox">
+              <img src="/image/suspendedsediment.jpg" class = "indexPic">
+          </div>
+          <div class="content">
+              <h2>Total Suspended Sediment Concentration</h2>
+          </div>
+      </a>
+      <a href="#wt" class = "box">
+          <div class="imgBox">
+              <img src="/image/watertemp.jpg" class = "indexPic">
+          </div>
+          <div class="content">
+              <h2>Water Temperature</h2>
+          </div>
+      </a>
+      <a href="#tur" class = "box">
+          <div class="imgBox">
+              <img src="/image/turbidity.jpg" class = "indexPic">
+          </div>
+          <div class="content">
+              <h2>Turbidity</h2>
+          </div>
+      </a>
+            
+        </div>
+        </section>
+
+
+        <section class ="clwLine" id="clw">
+            <div class="container">
+                <canvas id="clwChart"></canvas>
+              </div>
+              <div class="incontainer">
+                <p>
+                  Chloride increases the electrical conductivity of water and thus increases its corrosivity. In metal pipes, chloride reacts with metal ions to form soluble salts, thus increasing levels of metals in drinking-water. In lead pipes, a protective oxide layer is built up, but chloride enhances galvanic corrosion. It can also increase the rate of pitting corrosion of metal pipes. Chloride concentrations in excess of about 250 mg/litre can give rise to detectable taste in water, but the threshold depends upon the associated cations. 
+                </p>
+              </div>
+        </section>
+
+        <section class ="clwLine" id="din">
+          <div class="container">
+              <canvas id="dinChart"></canvas>
+            </div>
+            <div class="incontainer">
+              <p>
+                Dissolved inorganic nitrogen (DIN) is comprised of nitrate plus nitrite and ammonium. These forms of nitrogen are readily available to phytoplankton and often control the formation of blooms.
+              </p>
+            </div>
+        </section>
+
+        <section class ="clwLine" id="do">
+          <div class="container">
+              <canvas id="doChart"></canvas>
+            </div>
+            <div class="incontainer">
+              <p>
+                  Dissolved oxygen (DO) is one of the most important indicators of water quality. It is essential for the survival of fish and other aquatic organisms. Oxygen dissolves in surface water due to the aerating action of winds. Oxygen is also introduced into the water as a byproduct of aquatic plant photosynthesis. When dissolved oxygen becomes too low, fish and other aquatic organisms cannot survive. The colder water is, the more oxygen it can hold. As the water becomes warmer, less oxygen can be dissolved in the water. Salinity is also an important factor in determining the amount of oxygen a body of water can hold; fresh water can absorb more oxygen than salt water.
+
+Oxygen levels also may be reduced when there are too many bacteria or algae in water (see Biochemical Oxygen Demand). After the algae complete their life cycle and die, they are consumed by bacteria. During this decay process the bacteria also consume the oxygen dissolved in the water. This can lead to decreased levels of biologically available oxygen, in some cases leading to fish kills and death to other aquatic organisms.
+              </p>
+            </div>
+        </section>
+
+        <section class ="clwLine" id="doc">
+          <div class="container">
+              <canvas id="docChart"></canvas>
+            </div>
+            <div class="incontainer">
+              <p>
+                Dissolved and particulate organic carbon are important components in the carbon cycle and serve as a primary food sources for aquatic food webs. In addition, DOC alters aquatic ecosystem chemistries by contributing to acidification in low-alkalinity, weakly buffered, freshwater systems. Furthermore, DOC forms complexes with trace metals, creating water-soluble complexes which can be transported and taken up by organisms. Finally, organic carbon, as well as other dissolved and particulate matter, can affect light penetration in aquatic ecosystems, which is important for the ecosystem's phototrophs that need light to subsist.
+              </p>
+            </div>
+        </section>
+
+        <section class ="clwLine" id="don">
+        <div class="container">
+            <canvas id="donChart"></canvas>
+          </div>
+          <div class="incontainer">
+            <p>
+              Excess nitrogen can cause overstimulation of growth of aquatic plants and algae. Excessive growth of these organisms, in turn, can clog water intakes, use up dissolved oxygen as they decompose, and block light to deeper waters. Lake and reservoir eutrophication can occur, which produces unsightly scums of algae on the water surface, can occasionally result in fish kills, and can even "kill" a lake by depriving it of oxygen. The respiration efficiency of fish and aquatic invertebrates can occur, leading to a decrease in animal and plant diversity, and affects our use of the water for fishing, swimming, and boating.
+            </p>
+          </div>
+        </section>
+
+        <section class ="clwLine" id="dop">
+        <div class="container">
+            <canvas id="dopChart"></canvas>
+          </div>
+          <div class="incontainer">
+            <p>
+              High concentrations of phosphorus may result from poor agricultural practices, runoff from urban areas and lawns, leaking septic systems or discharges from sewage treatment plants. Too much phosphorus can cause increased growth of algae and large aquatic plants, which can result in decreased levels of dissolved oxygen– a process called eutrophication. High levels of phosphorus can also lead to algae blooms that produce algal toxins which can be harmful to human and animal health. 
+            </p>
+          </div>
+        </section>
+
+        <section class ="clwLine" id="pH">
+          <div class="container">
+              <canvas id="pHChart"></canvas>
+            </div>
+            <div class="incontainer">
+              <p>
+                pH is really a measure of the relative amount of free hydrogen and hydroxyl ions in the water. Water that has more free hydrogen ions is acidic, whereas water that has more free hydroxyl ions is basic. Since pH can be affected by chemicals in the water, pH is an important indicator of water that is changing chemically. The pH of water determines the solubility (amount that can be dissolved in the water) and biological availability (amount that can be utilized by aquatic life) of chemical constituents such as nutrients (phosphorus, nitrogen, and carbon) and heavy metals (lead, copper, cadmium, etc.). In addition to affecting how much and what form of phosphorus is most abundant in the water, pH also determines whether aquatic life can use it. In the case of heavy metals, the degree to which they are soluble determines their toxicity. Metals tend to be more toxic at lower pH because they are more soluble.
+              </p>
+            </div>
+        </section>
+
+        <section class ="clwLine" id="pn">
+          <div class="container">
+              <canvas id="pnChart"></canvas>
+            </div>
+            <div class="incontainer">
+              <p>
+                Particulate nitrogen (PN) often are derived from both natural ecological events (e.g. litter fall, run-off and weathering) and from human sources (e.g. sewage outfall, fertilizer run-off, industrial and agricultural effluents). PN compounds (in the form of nitrate) do not adsorb onto sediment particles as readily as particulate phosphorus (PP) compounds (phosphate), making PN more bioavailable. PN is largely derived from grazing lands. Excess nitrogen in our waterways, and ultimately the Reef, is known to stimulate algal and macrophyte growth (including cyanobacteria, known as “blue-green algae”) and cause crown-of-thorns starfish outbreaks. Algal blooms can also displace endemic species, diminish light availability to benthic species and cause excessive fluctuations in pH and dissolved oxygen which can stress and eliminate sensitive species. There is a high correlation between PN, PP and suspended solids, and it is often difficult to identify the individual effects on ecosystem health.
+              </p>
+            </div>
+        </section>
+
+        <section class ="clwLine" id="pp">
+        <div class="container">
+            <canvas id="ppChart"></canvas>
+          </div>
+          <div class="incontainer">
+            <p>
+              A portion of particulate
+phosphorus is contained in organic matter such as algae,
+plant and animal tissue, waste solids, or other organic
+matter. Microbial decomposition of organic compounds
+can convert organic particulate P to dissolved P. Some
+of the P in soil mineral particles can also be converted to
+dissolved P both in the water column and during
+chemical and physical changes in bottom sediment.
+Only the most tightly bound forms of particulate
+phosphorus such as aluminum-bound phosphorus are not
+generally available for algal growth. 
+            </p>
+          </div>
+        </section>
+
+        <section class ="clwLine" id="tssc">
+        <div class="container">
+            <canvas id="tsscChart"></canvas>
+          </div>
+          <div class="incontainer">
+            <p>
+              Both organic and inorganic particles of all sizes can contribute to the suspended solids concentration. Total suspended solids (TSS) are particles that are larger than 2 microns found in the water column. Anything smaller than 2 microns (average filter size) is considered a dissolved solid.Most suspended solids are made up of inorganic materials, though bacteria and algae can also contribute to the total solids concentration.
+            </p>
+          </div>
+        </section>
+
+        <section class ="clwLine" id="wt">
+          <div class="container">
+              <canvas id="wtChart"></canvas>
+            </div>
+            <div class="incontainer">
+              <p>
+                Temperature impacts both the chemical and biological characteristics of surface water. It affects the dissolved oxygen level in the water, photosynthesis of aquatic plants, metabolic rates of aquatic organisms, and the sensitivity of these organisms to pollution, parasites and disease.
+              </p>
+            </div>
+        </section>
+  
+        <section class ="clwLine" id="tur">
+          <div class="container">
+              <canvas id="turChart"></canvas>
+            </div>
+            <div class="incontainer">
+              <p>
+                Excessive turbidity, or cloudiness, in drinking water is aesthetically unappealing, and may also represent a health concern. Turbidity can provide food and shelter for pathogens. If not removed, the causes of high turbidity can promote regrowth of pathogens in the water, leading to waterborne disease outbreaks, which have caused significant cases of intestinal sickness throughout the United States and the world. Although turbidity is not a direct indicator of health risk, numerous studies show a strong relationship between removal of turbidity and removal of protozoa. The particles of turbidity provide "shelter" for microbes by reducing their exposure to attack by disinfectants. 
+              </p>
+            </div>
+        </section>
+
+
+        
+
+
+        
+        <button onclick="topFunction()" id="topBtn" title="Go to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <script>
+            //CLW Graph
+            let myChart = document.getElementById('clwChart').getContext('2d');
+            //DIN Graph
+            let dinChart = document.getElementById('dinChart').getContext('2d');
+            //DO Grapj
+            let doChart = document.getElementById('doChart').getContext('2d');
+            //DO Grapj
+            let docChart = document.getElementById('docChart').getContext('2d');
+            //DO Grapj
+            let donChart = document.getElementById('donChart').getContext('2d');
+            //DO Grapj
+            let dopChart = document.getElementById('dopChart').getContext('2d');
+            //DO Grapj
+            let pHChart = document.getElementById('pHChart').getContext('2d');
+            //DO Grapj
+            let pnChart = document.getElementById('pnChart').getContext('2d');
+            //DO Grapj
+            let ppChart = document.getElementById('ppChart').getContext('2d');
+            //DO Grapj
+            let tsscChart = document.getElementById('tsscChart').getContext('2d');
+            //DO Grapj
+            let wtChart = document.getElementById('wtChart').getContext('2d');
+            //DO Grapj
+            let turChart = document.getElementById('turChart').getContext('2d');
+        
+            // Global Options
+            Chart.defaults.global.defaultFontFamily = 'Lato';
+            Chart.defaults.global.defaultFontSize = 18;
+            Chart.defaults.global.defaultFontColor = '#777';
+            const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+        
+            let clwC = new Chart(myChart, {
+              type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+              data:{
+                //x axis labels
+                labels:month,
+                datasets:[
+                
+                //2015 CLW mg/L
+                {
+                  label:'2015',
+                  data: [
+                    890.0,
+                    413.0,
+                    302.1666666666667,
+                    161.57999999999998,
+                    137.67499999999998,
+                    63.5025,
+                    95.125,
+                    103.0,
+                    144.16,
+                    72.76666666666667,
+                    95.44999999999999,
+                    54.46666666666667  
+                ],
+                  borderWidth:3,
+                  borderColor:'#61ACCD',
+                  hoverBorderWidth:3,
+                  hoverBorderColor:'#000',
+                  fill: 'false'
+                },
+
+                //2016 CLW mg/L
+                {
+                  label:'2016',
+                  data: [
+                    1074.6666666666667,
+                    237.0,
+                    157.06666666666666,
+                    76.36,
+                    97.15,
+                    67.81666666666666,
+                    72.68571428571428,
+                    91.77499999999999,
+                    69.02,
+                    111.10000000000001,
+                    79.38571428571429,
+                    84.375
+                ],
+                  borderWidth:3,
+                  borderColor:'#da1e37',
+                  hoverBorderWidth:3,
+                  hoverBorderColor:'green',
+                  fill:'false'
+                },
+
+                //2017 CLW mg/L
+                {
+                  label:'2017',
+                  data: [
+                    135.05,
+                    102.9,
+                    176.34285714285716,
+                    114.075,
+                    72.32000000000001,
+                    110.05,
+                    54.39000000000001,
+                    71.3,
+                    174.925,
+                    69.65,
+                    84.23333333333333,
+                    155.76666666666668
+                    ],
+                  borderWidth:3,
+                  borderColor:'#1d3557',
+                  hoverBorderWidth:3,
+                  hoverBorderColor:'white',
+                  fill:'false'
+                },
+
+                //2018 CLW mg/L
+                {
+                  label:'2018',
+                  data: [
+                    548.8333333333334,
+                    220.64285714285714,
+                    291.6333333333333,
+                    95.18571428571428,
+                    61.82857142857142,
+                    126.05,
+                    63.720000000000006,
+                    115.94999999999999,
+                    49.0,
+                    57.075,
+                    59.1,
+                    88.19999999999999
+                ],
+                  borderWidth:3,
+                  borderColor:'#81b29a',
+                  hoverBorderWidth:3,
+                  hoverBorderColor:'white',
+                  fill:'false'
+                },
+
+                //2019 CLW mg/L
+                {
+                  label:'2019',
+                  data: [
+                    NaN,
+                    250.25,
+                    132.68571428571428,
+                    121.62,
+                    72.86666666666666,
+                    123.66666666666667,
+                    68.65,
+                    65.18571428571428,
+                    137.76666666666668,
+                    NaN,
+                    NaN,
+                    NaN
+                ],
+                  borderWidth:3,
+                  borderColor:'#0466c8',
+                  hoverBorderWidth:3,
+                  hoverBorderColor:'white',
+                  fill:'false',
+                },
+            ],
+            },
+              options:{
+                title:{
+                  display:true,
+                  text:'Total Chloride mg/L',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            });
+
+            let dinC = new Chart(dinChart, {
+              type:'line',
+              data: {
+                labels:month,
+                datasets: [
+                  //2015 DIN
+                  {
+                    label: '2015',
+                    data: [
+                    1.3238333333333332,
+                    2.034,
+                    1.0328000000000002,
+                    0.8472166666666667,
+                    0.98245,
+                    0.6761222222222222,
+                    0.7972,
+                    0.639,
+                    0.84816,
+                    0.6498111111111111,
+                    0.5559166666666667,
+                    0.6345076923076923
+                    ],
+                    borderWidth:3,
+                    borderColor:'#61ACCD',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2016 DIN
+                  {
+                    label: '2016',
+                    data: [
+                    1.351,
+                    1.1074285714285714,
+                    1.0225,
+                    0.8664,
+                    0.88295,
+                    0.7574714285714287,
+                    0.7222333333333333,
+                    0.5413,
+                    0.6950941176470589,
+                    0.4113,
+                    0.6255727272727274,
+                    0.7471
+                    ],
+                    borderWidth:3,
+                    borderColor:'#da1e37',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2017 DIN
+                  {
+                    label: '2017',
+                    data: [
+                    0.8413375000000001,
+                    0.7132999999999999,
+                    0.8031428571428572,
+                    0.7466999999999999,
+                    0.7418799999999999,
+                    0.7415,
+                    0.6786166666666668,
+                    0.6766,
+                    0.8915000000000001,
+                    0.49600000000000005,
+                    0.6964222222222223,
+                    0.6795749999999999
+                    ],
+                    borderWidth:3,
+                    borderColor:'#1d3557',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2018 DIN
+                  {
+                    label: '2018',
+                    data: [
+                    1.5003000000000002,
+                    1.0094142857142858,
+                    0.9369250000000001,
+                    0.8401222222222222,
+                    0.9512375,
+                    0.94565,
+                    0.8856000000000002,
+                    0.7629,
+                    1.1097714285714286,
+                    0.8740666666666667,
+                    1.08415,
+                    1.5449333333333335
+                    ],
+                    borderWidth:3,
+                    borderColor:'#81b29a',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2019 DIN
+                  {
+                    label: '2019',
+                    data: [
+                    NaN,
+                    1.4894500000000002,
+                    1.0576625,
+                    0.8304666666666667,
+                    1.1109333333333333,
+                    1.2121333333333333,
+                    1.0394166666666667,
+                    0.767242857142857,
+                    1.021925,
+                    NaN,
+                    NaN,
+                    NaN
+                    ],
+                    borderWidth:3,
+                    borderColor:'#0466c8',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                ]
+
+              },
+              options:{
+                title:{
+                  display:true,
+                  text:'Dissolved Inorganic Nitrogen mg/L',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            });
+
+            let doC = new Chart(doChart, {
+              type:'line',
+              data: {
+                labels:month,
+                datasets: [
+                  //2015 DIN
+                  {
+                    label: '2015',
+                    data: [
+                    14.9,
+NaN,
+12.25,
+9.2,
+6.8,
+6.55,
+6.5,
+8.6,
+7.45,
+10.1,
+10.3,
+10.899999999999999
+                    ],
+                    borderWidth:3,
+                    borderColor:'#61ACCD',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2016 DIN
+                  {
+                    label: '2016',
+                    data: [
+                    12.25,
+12.1,
+10.0,
+9.05,
+7.2,
+7.35,
+7.033333333333334,
+7.550000000000001,
+7.5,
+8.8,
+12.2,
+13.850000000000001
+                    ],
+                    borderWidth:3,
+                    borderColor:'#da1e37',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2017 DIN
+                  {
+                    label: '2017',
+                    data: [
+                    12.25,
+12.1,
+10.0,
+9.05,
+7.2,
+7.35,
+7.033333333333334,
+7.550000000000001,
+7.5,
+8.8,
+12.2,
+13.850000000000001
+                    ],
+                    borderWidth:3,
+                    borderColor:'#1d3557',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2018 DIN
+                  {
+                    label: '2018',
+                    data: [
+                    12.65,
+11.375,
+12.966666666666667,
+9.875,
+8.05,
+7.166666666666667,
+7.666666666666667,
+7.633333333333333,
+8.1,
+8.8,
+9.85,
+12.5
+                    ],
+                    borderWidth:3,
+                    borderColor:'#81b29a',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2019 DIN
+                  {
+                    label: '2019',
+                    data: [
+                    NaN,
+12.45,
+12.175,
+12.1,
+8.3,
+8.2,
+7.05,
+7.233333333333333,
+6.8,
+NaN,
+NaN,
+NaN
+                    ],
+                    borderWidth:3,
+                    borderColor:'#0466c8',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                ]
+
+              },
+              options:{
+                title:{
+                  display:true,
+                  text:'Dissolved Oxygen mg/L',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            })
+
+            let docC = new Chart(docChart, {
+              type:'line',
+              data: {
+                labels:month,
+                datasets: [
+                  //2015 DOC
+                  {
+                    label: '2015',
+                    data: [
+                    5.896666666666667,
+3.41,
+4.1,
+5.925999999999999,
+4.585,
+6.075,
+7.584999999999999,
+4.22,
+3.5660000000000003,
+10.910000000000002,
+5.015000000000001,
+6.68
+                    ],
+                    borderWidth:3,
+                    borderColor:'#61ACCD',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2016 DOC
+                  {
+                    label: '2016',
+                    data: [
+                    3.823333333333333,
+                    5.257142857142858,
+                    2.89,
+                    8.462,
+                    4.0625,
+                    5.511666666666667,
+                    4.43,
+                    3.6675000000000004,
+                    8.438999999999998,
+                    4.29,
+                    8.804285714285715,
+                    3.825
+                    ],
+                    borderWidth:3,
+                    borderColor:'#da1e37',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2017 DIN
+                  {
+                    label: '2017',
+                    data: [
+                    4.6674999999999995,
+                    3.2350000000000003,
+                    5.534285714285714,
+                    7.540000000000001,
+                    5.991999999999999,
+                    3.5275,
+                    5.453333333333333,
+                    3.49,
+                    4.89,
+                    NaN,
+                    NaN,
+                    NaN
+                    ],
+                    borderWidth:3,
+                    borderColor:'#1d3557',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                ]
+
+              },
+              options:{
+                title:{
+                  display:true,
+                  text:'Dissolved Organic Carbon mg/L',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            })
+
+            let donC = new Chart(donChart, {
+              type:'line',
+              data: {
+                labels:month,
+                datasets: [
+                  //2015 DIN
+                  {
+                    label: '2015',
+                    data: [
+                    0.43283333333333335,
+0.096,
+0.3007714285714286,
+0.4276166666666667,
+0.33230000000000004,
+0.37454444444444446,
+0.4278,
+0.272,
+0.23743999999999996,
+0.5156333333333334,
+0.33875000000000005,
+0.3907999999999999
+                    ],
+                    borderWidth:3,
+                    borderColor:'#61ACCD',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2016 DIN
+                  {
+                    label: '2016',
+                    data: [
+                    0.36233333333333334,
+0.41328571428571426,
+0.18775,
+0.5856,
+0.33455,
+0.35624285714285714,
+0.2861,
+0.32703333333333334,
+0.3636705882352941,
+0.22744999999999999,
+0.33679090909090914,
+0.33065
+                    ],
+                    borderWidth:3,
+                    borderColor:'#da1e37',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2017 DIN
+                  {
+                    label: '2017',
+                    data: [
+                    0.2346625,
+0.19103333333333336,
+0.3201428571428572,
+0.5808,
+0.39092,
+0.2815,
+0.3458833333333334,
+0.2289,
+0.274,
+0.19749999999999998,
+0.35513333333333336,
+0.677925
+                    ],
+                    borderWidth:3,
+                    borderColor:'#1d3557',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2018 DIN
+                  {
+                    label: '2018',
+                    data: [
+                    0.7613666666666666,
+0.35429999999999995,
+0.44607500000000005,
+0.3743222222222221,
+0.33263750000000003,
+0.31784999999999997,
+0.3492,
+0.25635,
+0.3537666666666666,
+0.4826000000000001,
+0.2631,
+0.2550666666666667
+                    ],
+                    borderWidth:3,
+                    borderColor:'#81b29a',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2019 DIN
+                  {
+                    label: '2019',
+                    data: [
+                    NaN,
+0.27555,
+0.34233749999999996,
+0.7768666666666665,
+0.3024,
+0.2845333333333333,
+0.3824166666666666,
+0.5440428571428572,
+0.25382499999999997,
+NaN,
+NaN,
+NaN
+                    ],
+                    borderWidth:3,
+                    borderColor:'#0466c8',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                ]
+
+              },
+              options:{
+                title:{
+                  display:true,
+                  text:'Dissolved Organic Nitrogen mg/L',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            })
+
+            let dopC = new Chart(dopChart, {
+              type:'line',
+              data: {
+                labels:month,
+                datasets: [
+                  //2015 DIN
+                  {
+                    label: '2015',
+                    data: [
+                    0.005466666666666667,
+0.0152,
+0.006083333333333334,
+0.010220000000000002,
+0.009775,
+0.0065375,
+0.0077,
+0.0093,
+0.01026,
+0.030583333333333334,
+0.011000000000000001,
+0.02652222222222222
+                    ],
+                    borderWidth:3,
+                    borderColor:'#61ACCD',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2016 DIN
+                  {
+                    label: '2016',
+                    data: [
+                    0.006566666666666666,
+0.012985714285714284,
+0.007375,
+0.022520000000000002,
+0.005750000000000001,
+0.008783333333333336,
+0.0116,
+0.015225,
+0.016220000000000002,
+0.008833333333333334,
+0.023928571428571428,
+0.011375
+                    ],
+                    borderWidth:3,
+                    borderColor:'#da1e37',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2017 DIN
+                  {
+                    label: '2017',
+                    data: [
+                    0.010966666666666664,
+0.002166666666666667,
+0.01231111111111111,
+0.020025,
+0.01552,
+0.011850000000000001,
+0.011816666666666665,
+0.0036999999999999997,
+0.00885,
+0.00475,
+0.015633333333333332,
+0.0033
+                    ],
+                    borderWidth:3,
+                    borderColor:'#1d3557',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2018 DIN
+                  {
+                    label: '2018',
+                    data: [
+                    0.05266666666666667,
+0.018357142857142853,
+0.020933333333333325,
+0.0141875,
+0.011942857142857144,
+0.007300000000000001,
+0.015633333333333332,
+0.006875,
+0.014614285714285715,
+0.0183,
+0.010371428571428571,
+0.0014333333333333336
+                    ],
+                    borderWidth:3,
+                    borderColor:'#81b29a',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2019 DIN
+                  {
+                    label: '2019',
+                    data: [
+                    NaN,
+0.004975,
+0.0217,
+0.10202,
+0.008466666666666667,
+0.0078000000000000005,
+0.005533333333333334,
+0.056671428571428574,
+8.000000000000004E-4,
+NaN,
+NaN,
+NaN
+                    ],
+                    borderWidth:3,
+                    borderColor:'#0466c8',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                ]
+
+              },
+              options:{
+                title:{
+                  display:true,
+                  text:'Dissolved Organic Phosphorus mg/L',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            })
+
+            let pHC = new Chart(pHChart, {
+              type:'line',
+              data: {
+                labels:month,
+                datasets: [
+                  //2015 DIN
+                  {
+                    label: '2015',
+                    data: [
+                    7.5,
+NaN,
+7.7,
+7.35,
+7.25,
+7.1,
+7.4,
+7.6,
+7.2,
+7.7,
+7.3,
+7.35
+                    ],
+                    borderWidth:3,
+                    borderColor:'#61ACCD',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2016 DIN
+                  {
+                    label: '2016',
+                    data: [
+                    7.2,
+7.5,
+7.8,
+7.5,
+7.5,
+7.333333333333333,
+7.366666666666666,
+7.5,
+7.575,
+7.4,
+7.35,
+7.466666666666666
+                    ],
+                    borderWidth:3,
+                    borderColor:'#da1e37',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2017 DIN
+                  {
+                    label: '2017',
+                    data: [
+                    7.1,
+7.9,
+7.5,
+7.65,
+7.1,
+7.4,
+7.133333333333333,
+7.65,
+7.7,
+7.35,
+8.5,
+8.1
+                    ],
+                    borderWidth:3,
+                    borderColor:'#1d3557',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2018 DIN
+                  {
+                    label: '2018',
+                    data: [
+                    7.7,
+7.7,
+7.933333333333333,
+7.500000000000001,
+7.4,
+7.3999999999999995,
+7.5,
+7.466666666666666,
+7.5,
+7.6,
+7.15,
+7.5
+                    ],
+                    borderWidth:3,
+                    borderColor:'#81b29a',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2019 DIN
+                  {
+                    label: '2019',
+                    data: [
+                    NaN,
+7.6,
+7.45,
+7.7,
+7.4,
+7.5,
+7.1,
+7.366666666666667,
+7.5,
+NaN,
+NaN,
+NaN
+                    ],
+                    borderWidth:3,
+                    borderColor:'#0466c8',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                ]
+
+              },
+              options:{
+                title:{
+                  display:true,
+                  text:'pH corrected for Temperature 25 degrees (SU)',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            })
+
+            let pnC = new Chart(pnChart, {
+              type:'line',
+              data: {
+                labels:month,
+                datasets: [
+                  //2015 DIN
+                  {
+                    label: '2015',
+                    data: [
+                    0.22033333333333335,
+0.135,
+0.18200000000000002,
+0.4624,
+0.33799999999999997,
+0.70175,
+0.60225,
+0.03,
+0.048799999999999996,
+0.5361666666666666,
+0.11325,
+0.29211111111111115
+                    ],
+                    borderWidth:3,
+                    borderColor:'#61ACCD',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2016 DIN
+                  {
+                    label: '2016',
+                    data: [
+                    0.09899999999999999,
+0.5505714285714286,
+0.057333333333333326,
+0.6898,
+0.26825,
+0.2105,
+0.3454285714285715,
+0.12075,
+0.33830000000000005,
+0.05333333333333332,
+0.3828571428571429,
+0.1395
+                    ],
+                    borderWidth:3,
+                    borderColor:'#da1e37',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2017 DIN
+                  {
+                    label: '2017',
+                    data: [
+                    0.45749999999999996,
+0.0675,
+0.8178571428571428,
+0.34375,
+0.9202,
+0.10825000000000001,
+0.6181666666666668,
+0.041999999999999996,
+0.0555,
+0.1735,
+0.20650000000000002,
+0.06566666666666666
+                    ],
+                    borderWidth:3,
+                    borderColor:'#1d3557',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2018 DIN
+                  {
+                    label: '2018',
+                    data: [
+                    0.29283333333333333,
+0.953142857142857,
+0.20516666666666664,
+0.5184285714285713,
+0.5384285714285714,
+0.23450000000000004,
+0.1844,
+0.44575000000000004,
+0.424,
+0.2345,
+0.47283333333333327,
+0.03766666666666666
+                    ],
+                    borderWidth:3,
+                    borderColor:'#81b29a',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2019 DIN
+                  {
+                    label: '2019',
+                    data: [
+                    NaN,
+0.21575,
+0.3705,
+1.2856,
+0.3146666666666667,
+0.07566666666666667,
+0.6829999999999999,
+0.41500000000000004,
+0.09033333333333333,
+NaN,
+NaN,
+NaN
+                    ],
+                    borderWidth:3,
+                    borderColor:'#0466c8',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                ]
+
+              },
+              options:{
+                title:{
+                  display:true,
+                  text:'Particulate Nitrogen mg/L',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            })
+
+            let ppC = new Chart(ppChart, {
+              type:'line',
+              data: {
+                labels:month,
+                datasets: [
+                  //2015 DIN
+                  {
+                    label: '2015',
+                    data: [
+                    0.102,
+0.124,
+0.07841666666666665,
+0.16586,
+0.11952499999999999,
+0.30140000000000006,
+0.313425,
+0.0139,
+0.04846,
+0.287,
+0.06887499999999999,
+0.1322333333333333
+                    ],
+                    borderWidth:3,
+                    borderColor:'#61ACCD',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2016 DIN
+                  {
+                    label: '2016',
+                    data: [
+                    0.07596666666666667,
+0.20934285714285714,
+0.04756666666666667,
+0.23978000000000002,
+0.130925,
+0.09055,
+0.13931428571428572,
+0.067925,
+0.15202999999999997,
+0.06396666666666666,
+0.19577142857142857,
+0.069525
+                    ],
+                    borderWidth:3,
+                    borderColor:'#da1e37',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2017 DIN
+                  {
+                    label: '2017',
+                    data: [
+                    0.21646249999999997,
+0.02935,
+0.28385714285714286,
+0.11955,
+0.33254,
+0.08022499999999999,
+0.17720000000000002,
+0.0315,
+0.042,
+0.05475,
+0.09501666666666668,
+0.052775
+                    ],
+                    borderWidth:3,
+                    borderColor:'#1d3557',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2018 DIN
+                  {
+                    label: '2018',
+                    data: [
+                    0.22718333333333338,
+0.3115571428571428,
+0.08108333333333334,
+0.2365714285714286,
+0.1538142857142857,
+0.07095,
+0.09856000000000001,
+0.178475,
+0.18115714285714285,
+0.1056,
+0.10831666666666666,
+0.029766666666666663
+                    ],
+                    borderWidth:3,
+                    borderColor:'#81b29a',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2019 DIN
+                  {
+                    label: '2019',
+                    data: [
+                    NaN,
+0.11232500000000001,
+0.1295714285714286,
+0.44006,
+0.07283333333333333,
+0.037866666666666667,
+0.3066666666666667,
+0.11668571428571428,
+0.04293333333333333,
+NaN,
+NaN,
+NaN
+                    ],
+                    borderWidth:3,
+                    borderColor:'#0466c8',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                ]
+
+              },
+              options:{
+                title:{
+                  display:true,
+                  text:'Particulate Phosphrous mg/L',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            })
+
+            let tsscC = new Chart(tsscChart, {
+              type:'line',
+              data: {
+                labels:month,
+                datasets: [
+                  //2015 DIN
+                  {
+                    label: '2015',
+                    data: [
+                    31.333333333333332,
+108.5,
+41.44444444444444,
+121.875,
+29.666666666666668,
+135.7,
+141.85714285714286,
+3.8,
+12.333333333333334,
+70.625,
+15.5,
+40.111111111111114
+                    ],
+                    borderWidth:3,
+                    borderColor:'#61ACCD',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2016 DIN
+                  {
+                    label: '2016',
+                    data: [
+                    20.666666666666668,
+140.42857142857142,
+7.0,
+70.0,
+80.25,
+50.666666666666664,
+103.71428571428571,
+34.25,
+60.0,
+4.666666666666667,
+41.583333333333336,
+15.666666666666666
+                    ],
+                    borderWidth:3,
+                    borderColor:'#da1e37',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2017 DIN
+                  {
+                    label: '2017',
+                    data: [
+                    221.27272727272728,
+6.0,
+150.54545454545453,
+17.833333333333332,
+191.22222222222223,
+37.666666666666664,
+290.3333333333333,
+2.0,
+5.75,
+21.0,
+32.1,
+4.0
+                    ],
+                    borderWidth:3,
+                    borderColor:'#1d3557',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2018 DIN
+                  {
+                    label: '2018',
+                    data: [
+                    40.9,
+221.25,
+21.545454545454547,
+143.25,
+80.7,
+19.142857142857142,
+113.6,
+125.5,
+51.5,
+13.25,
+113.5,
+16.333333333333332
+                    ],
+                    borderWidth:3,
+                    borderColor:'#81b29a',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2019 DIN
+                  {
+                    label: '2019',
+                    data: [
+                    40.9,
+221.25,
+21.545454545454547,
+143.25,
+80.7,
+19.142857142857142,
+113.6,
+125.5,
+51.5,
+13.25,
+113.5,
+16.333333333333332
+                    ],
+                    borderWidth:3,
+                    borderColor:'#0466c8',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                ]
+
+              },
+              options:{
+                title:{
+                  display:true,
+                  text:'Total Suspended Sediment Concentration mg/L',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            })
+
+            let wtC = new Chart(wtChart, {
+              type:'line',
+              data: {
+                labels:month,
+                datasets: [
+                  //2015 DIN
+                  {
+                    label: '2015',
+                    data: [
+                    6.050000000000001,
+1.8,
+7.666666666666667,
+15.133333333333333,
+20.625,
+22.95,
+22.380000000000003,
+NaN,
+22.299999999999997,
+17.285714285714285,
+9.575000000000001,
+11.855555555555556
+                    ],
+                    borderWidth:3,
+                    borderColor:'#61ACCD',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2016 DIN
+                  {
+                    label: '2016',
+                    data: [
+                    3.6333333333333333,
+7.142857142857143,
+11.266666666666666,
+14.819999999999999,
+16.7,
+23.150000000000002,
+25.285714285714285,
+24.525,
+22.03,
+12.966666666666669,
+11.416666666666666,
+7.828571428571429
+                    ],
+                    borderWidth:3,
+                    borderColor:'#da1e37',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2017 DIN
+                  {
+                    label: '2017',
+                    data: [
+                    7.584615384615385,
+10.35,
+12.009999999999998,
+14.866666666666667,
+18.211111111111112,
+21.93333333333333,
+23.985714285714288,
+24.825,
+23.0,
+14.3,
+11.127272727272727,
+5.8
+                    ],
+                    borderWidth:3,
+                    borderColor:'#1d3557',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2018 DIN
+                  {
+                    label: '2018',
+                    data: [
+                    7.81,
+10.191666666666668,
+8.490909090909092,
+12.809090909090907,
+19.59166666666667,
+22.71428571428571,
+24.3375,
+23.27142857142857,
+21.38571428571429,
+20.075,
+13.300000000000002,
+7.900000000000001
+                    ],
+                    borderWidth:3,
+                    borderColor:'#81b29a',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2019 DIN
+                  {
+                    label: '2019',
+                    data: [
+                    NaN,
+7.25,
+7.614285714285716,
+14.760000000000002,
+18.366666666666667,
+18.733333333333334,
+23.633333333333336,
+24.48571428571429,
+23.26666666666667,
+NaN,
+NaN,
+NaN
+                    ],
+                    borderWidth:3,
+                    borderColor:'#0466c8',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                ]
+
+              },
+              options:{
+                title:{
+                  display:true,
+                  text:'Water Temperature (C)',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            })
+
+            let turC = new Chart(turChart, {
+              type:'line',
+              data: {
+                labels:month,
+                datasets: [
+                  //2015 DIN
+                  {
+                    label: '2015',
+                    data: [
+                    63.0,
+106.0,
+11.95,
+27.733333333333334,
+7.074999999999999,
+136.3923076923077,
+109.86666666666667,
+2.4,
+10.940000000000001,
+75.3,
+12.725000000000001,
+43.611111111111114
+                    ],
+                    borderWidth:3,
+                    borderColor:'#61ACCD',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2016 DIN
+                  {
+                    label: '2016',
+                    data: [
+                    137.33333333333334,
+134.66666666666666,
+19.25,
+75.0,
+52.56666666666666,
+64.0,
+17.0,
+5.8,
+NaN,
+4.433333333333334,
+37.61666666666667,
+6.85
+                    ],
+                    borderWidth:3,
+                    borderColor:'#da1e37',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2017 DIN
+                  {
+                    label: '2017',
+                    data: [
+                    97.08888888888889,
+4.35,
+95.25,
+33.55,
+114.21111111111112,
+36.442857142857136,
+131.75,
+6.3,
+3.771428571428572,
+13.4,
+26.77,
+6.15
+                    ],
+                    borderWidth:3,
+                    borderColor:'#1d3557',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2018 DIN
+                  {
+                    label: '2018',
+                    data: [
+                    49.55555555555556,
+92.37,
+30.6,
+84.27000000000001,
+50.980000000000004,
+15.1,
+20.942857142857143,
+61.825,
+45.7,
+27.9,
+39.85,
+11.533333333333333
+                    ],
+                    borderWidth:3,
+                    borderColor:'#81b29a',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                  //2019 DIN
+                  {
+                    label: '2019',
+                    data: [
+                    NaN,
+41.666666666666664,
+30.733333333333334,
+40.92,
+7.4,
+13.2,
+122.68333333333334,
+34.785714285714285,
+6.566666666666666,
+NaN,
+NaN,
+NaN
+                    ],
+                    borderWidth:3,
+                    borderColor:'#0466c8',
+                    hoverBorderWidth:3,
+                    hoverBorderColor:'#000',
+                    fill: 'false'
+
+                  },
+                ]
+
+              },
+              options:{
+                title:{
+                  display:true,
+                  text:'Turbidity (FNU)',
+                  fontSize:25,
+                  fontColor: "white"
+                },
+                scales: {
+                  xAxes: [{
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Month',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    gridLines: {
+                      color:'white',
+                      zeroLineColor: 'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    }
+                  }],
+                  yAxes: [{ 
+                    display: true,
+                    color:'white',
+                    scaleLabel: {
+                      display:true,
+                      labelString: 'Value mg/L',
+                      fontSize: 30,
+                      fontColor:'white',
+                    },
+                    ticks: {
+                      fontColor: 'white',
+                    },
+                    gridLines: { color: "white" }
+                  }]
+                },
+                legend:{
+                  display:true,
+                  position:'right',
+                  labels:{
+                    fontColor:'white'
+                  }
+                },
+                layout: {
+                    position: 'absolute',
+                    width: '100%',
+                    left: '0',
+                    backgroundColor:"white"
+                },
+                tooltips:{
+                  enabled:true
+                },
+              }
+            })
+        </script>
+    </body>
+
+</html>

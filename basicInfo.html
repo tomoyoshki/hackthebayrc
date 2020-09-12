@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+    <head>
+        <meta charset = "utf-8">
+        <title>Overview</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,500&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+        <script>
+            function openSlideMenu(){
+              document.getElementById('menu').style.width = '250px';
+              document.getElementById('slide').style.opacity = '0';
+              document.getElementById('menu').style.fontSize = '1.5vw';
+            }
+            function closeSlideMenu(){
+              document.getElementById('menu').style.width = '0';
+              document.getElementById('slide').style.opacity = '1';
+              document.getElementById('menu').style.fontSize = '0';
+            }
+            mybutton = document.getElementById("myBtn");
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+          </script>
+    </head>
+    <body>
+      <section class ="top">
+          <div class="ti">Hack the Bay</div>
+          <div id="content">
+              <span id="slide">
+                <a href="#" onclick="openSlideMenu()">
+                  <i class="fas fa-bars"></i>
+                </a>
+              </span>            
+              <div id="menu" class="nav">
+                <a class="close" onclick="closeSlideMenu()">
+                  <i class="fas fa-times"></i>
+                </a>
+                <a href="index.html">Main</a>
+                <a href="basicInfo.html">Basic Info</a>
+                <a href="impact.html">Impact</a>
+                <a href="data.html">Data Report</a>
+                <a href="restoration.html">Restoration</a>
+              </div>
+            </div>
+      </section>
+      <section class = subtop>
+          <img class="indexPic" src="/image/p1.jpg">
+          <img class="cover" src="/image/blackbg.jpg">
+          <div class="title">Overview</div>
+      </section>
+      <section class ="about">
+          <div class="contentbox">
+              <h2 class= "titleText">Background</h2>
+              <p class = "bitext">
+                The United States has one of the safest water supplies in the world. 
+                If you are among the 286 million Americans that get their water from a community water system, your tap water is regulated by the United States Environmental Protection Agency (EPA).                 
+              </p>
+              <p class="bitext">
+                Even though our tap water supplies are considered to be one of the safest in the world, water contamination can still occur. There are many sources of contamination, including:
+                <ul>
+                  <p class="bitextlist">- Sewage releases</pi>
+                  <p class="bitextlist">- Naturally occurring chemicals and minerals (for example, arsenic, radon, uranium)</p>
+                  <p class="bitextlist">-  Local land use practices (for example, fertilizers, pesticides, livestock, concentrated feeding operations)</p>
+                  <p class="bitextlist">- Manufacturing processes (for example, heavy metals, cyanide)</p>
+                  <p class="bitextlist">- Malfunctioning on-site wastewater treatment systems (for example, septic systems)</p>
+
+                </ul>
+              </p>
+              <p class="bitext">
+                In addition, drinking water that is not properly treated or which travels through an improperly maintained distribution system (for example, the piping system) may also create an environment for contamination.
+              </p>
+          </div>
+          <div class="imageBx">
+            <ul>
+              <img class="biPic" src="/image/wc1.png">
+              <img class="biPic" src="/image/wc2.jpg">
+              <img class="biPic" src="/image/wc3.jpg">
+            </ul>
+          </div>
+      </section>
+      <section class = "banner">
+          <img src="/image/pr2.jpg" class = "indexPic">
+          <div class="title">DC Potomac River</div>
+          <img class="cover" src="/image/blackbg.jpg">
+      </section>
+      <section class ="riverabout">
+        <div class="contentbox">
+            <p class = "text">
+              <ul>
+                <p class="bitextlist">- The Potomac River is found within the Mid-Atlantic region of the United States and flows from the Potomac Highlands into the Chesapeake Bay. </p>
+                <p>""</p>
+                <p class="bitextlist">- The river is approximately 405 miles (652 km) long, with a drainage area of about 14,700 square miles (38,000 km2). </p>
+                <p>""</p>
+                <p class="bitextlist">- In terms of area, this makes the Potomac River the fourth largest river along the Atlantic coast of the United States and the 21st largest in the United States. </p>
+                <p>""</p>
+                <p class="bitextlist">- Over 5 million people live within the Potomac watershed, and drinking water for the District of Columbia comes from the Potomac River. Therefore Water Quality is crucial to community health.</p>
+                <p>""</p>
+                <a href="data.html" class ="btn">Learn what is in your watershed.</a>
+                <a href="impact.html" class ="btn">Learn how does it impact you?</a>
+              </ul>
+              
+            </p>
+        </div>
+        <div class="imageBx">
+          <img class="indexPic" src="/image/prmap.jpg">
+        </div>
+    </section>
+      <button onclick="topFunction()" id="topBtn" title="Go to top">
+          <i class="fas fa-arrow-up"></i>
+      </button>
+  </body>
+
+</html>

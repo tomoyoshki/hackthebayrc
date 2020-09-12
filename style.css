@@ -1,0 +1,743 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    --a: #06d6a0;
+    --b: #ffd166;
+    --c: #fb8b24;
+    --d: #d90429;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255, 0.2);
+    border-radius: 30px;
+  }
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(255, 255, 255, 1);
+    border-radius: 30px;
+    transition: .4s;
+  }
+  
+section {
+    position: relative;
+    padding: 50px;
+}
+#topBtn{
+    position: fixed;
+    text-decoration: none;
+    bottom: 25px;
+    right: 25px;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99;
+    opacity: 0.3;
+    transition: 1s;
+    outline: none;
+}
+#topBtn:hover{
+    opacity: 1;
+    color: black;
+    background-color: white;
+    transition: 0.7s;
+}
+
+#dataBtn{
+    position: fixed;
+    text-decoration: none;
+    bottom: 25px;
+    left: 25px;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99;
+    opacity: 0.3;
+    transition: 1s;
+    outline: none;
+}
+#dataBtn:hover{
+    opacity: 1;
+    color: black;
+    background-color: white;
+    transition: 0.7s;
+}
+
+
+.btn {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    background: #fff;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+.top {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100000;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+.heading {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+}
+.ti {
+    width: 100%;
+    color: white;
+    font-size: 2vw;
+    font-family: 'Raleway', sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.subtop {
+    position: relative;
+    width:100%;
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtop:before  {
+    content: ' ';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 150px;
+    z-index: 1;
+    background: linear-gradient(to top,black,transparent );
+}
+.subtop .title {
+    position: relative;
+    max-width: 900px;
+    z-index: 1;
+    font-size: 4.5vw;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    background: transparent;   
+}
+
+.indexPic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    object-fit: cover;
+    transition: 0.4s;
+}
+.cover:hover {
+    opacity: 0.1;
+    transition: .4;
+}
+.nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background-color: #111;
+	opacity: .85;
+	overflow-x: hidden;
+	padding-top: 60px;
+    transition: 0.7s;
+    display: inline-block;
+}
+.nav a {
+	display: block;
+	padding: 20px 30px;
+	text-decoration: none;
+    color: gainsboro;
+    opacity: 0.5;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.nav a:hover {
+    color: black;
+    background-color: antiquewhite;
+    opacity: 1;
+    transition: 0.4s;
+    
+}
+.nav .close {
+	position: absolute;
+	top: 0;
+	left: 5px;
+	font-size: 30px
+}
+#slide a {
+	color: white;
+    font-size: 36px;
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+}
+#slide a:hover{
+    color: black;
+    background-color: white;
+    transition: 1s;
+}
+#content {
+	padding: 20px;
+	transition: margin-left 0.7s;
+	overflow: hidden;
+    width: 100%;
+}
+.epa {
+    position: absolute;
+    border-radius: 10px;
+    width: 45%;
+    right: 60px;
+}
+.impactSection {
+    position: relative;
+    width: 100%;
+    min-height:40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+.impactSection .result {
+    min-width: 50%;
+    width: 50%;
+    text-align: center;
+    padding-right: 40px;
+}
+.impactSection .result .grade {
+    color: var(--d);
+    font-size: 8vw;
+    text-align: center;
+}
+.impactSection .result .name {
+    color: white;
+    font-size: 4vw;
+    text-align: center;
+}
+.impactSection .detail a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+    line-height: 30px;
+    padding-top: 20px;
+    text-align: left;
+}
+.impactSection .detail {
+    padding-top: 70px;
+    position: relative;
+    min-width: 40%;
+    width: 100vw;
+    min-height: 40vw;
+    font-family: 'Raleway', sans-serif;
+}
+.impactSection .detail  {
+    color: white;
+    text-align: center;
+    font-size: 3vw;
+    
+}
+.impactSection .detail ul {
+    color: white;
+    font-size: 1.5vw;
+    line-height: 30px;
+    padding-top: 20px;
+    text-align: left;
+}
+.impactSection .detail h2 {
+    color: white;
+    text-align: center;
+    font-size: 3vw;
+    padding-top: 20px;
+    padding-bottom: -10px;
+}
+.impactSection .detail p {
+    color: white;
+    font-size: 1.5vw;
+    line-height: 30px;
+    padding-top: 20px;
+    text-align: left;
+}
+.about {
+    position: relative;
+    width: 100%;
+    min-height:80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.restorationtop {
+    position: relative;
+    width: 100%;
+    min-height:40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.riverabout {
+    position: relative;
+    width: 100%;
+    min-height:60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.restorationgroup {
+    position: relative;
+    width: 100%;
+    min-height:50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px groove white;
+    border-bottom: 2px dashed white;
+}
+.restorationgroup .content{
+    min-width: 50%;
+    width: 50%;
+    text-align: center;
+    padding-right: 40px;
+}
+.restorationgroup .smallcontent {
+    min-width: 50%;
+    width: 50%;
+    text-align: center;
+    padding-right: 40px;
+}
+.restorationgroup .smallcontent h1{
+    font-size: 3vw;
+    text-align: center;
+    padding-right: 40px;
+}
+.restorationgroup .smallcontent p{
+    font-size: 1.5vw;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    padding-right: 40px;
+    
+}
+.restorationgroup .secondcontent {
+    padding-top: 70px;
+    position: relative;
+    min-width: 40%;
+    width: 100vw;
+    min-height: 40vw;
+}
+.restorationgroup .secondcontent p{
+    color: white;
+    font-size: 2vw;
+    font-family: 'Raleway', sans-serif;
+}
+.restorationgroup ul{
+    display: block;
+    padding-left: 40px;
+    line-height: 30px;
+}
+.restorationgroup ul li {
+    font-size: 1.5vw;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+.restorationgroup .imageBx {
+    position: relative;
+    min-width: 40%;
+    width: 100vw;
+    min-height: 30vw;
+}
+.restorationgroup img {
+    border-radius: 30px;
+}
+.restorationgroup h1 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size:60px;
+}
+.restorationgroup p {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px
+}
+.ioverview {
+    position: relative;
+    width: 100%;
+    min-height:30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mtitle {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 5vw;
+}
+.about .contentbox {
+    min-width: 50%;
+    width: 50%;
+    text-align: center;
+    padding-right: 40px;
+}
+.riverabout .contentbox {
+    min-width: 50%;
+    width: 50%;
+    text-align: center;
+    padding-right: 40px;
+}
+.ioverview .contentbox {
+    position: absolute;
+    width: 50%;
+    left: 60px;
+    text-align: center;
+}
+.titleText {
+    font-weight: 600;
+    color: white;
+    font-size: 3vw;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+.text {
+    color: white;
+    font-size: 1.8vw;
+    font-family: 'Raleway', sans-serif;
+}
+.bitext {
+    color: white;
+    font-size: 1.7vw;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    padding: 30px;
+    padding-right: 0;
+}
+.bitextlist {
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    padding-left: 50px;
+}
+.riverabout .bitextlist {
+    color: white;
+    font-size: 1.6vw;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    padding-left: 50px;
+}
+.about .imageBx {
+    position: relative;
+    min-width: 40%;
+    width: 100vw;
+    min-height: 40vw;
+}
+.riverabout .imageBx {
+    position: relative;
+    min-width: 40%;
+    width: 100vw;
+    min-height: 35vw;
+}
+.about .biPic {
+    position: relative;
+    height: 40%;
+    width: 100%;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner:before {
+    content: ' ';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    background: linear-gradient(to top,black,transparent );
+}
+.banner:after {
+    content: ' ';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    background: linear-gradient(to bottom,black,transparent );
+}
+.banner .title {
+    position: relative;
+    max-width: 900px;
+    z-index: 1;
+    font-size: 4.5vw;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    background: transparent;   
+}
+.banner .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+.list {
+    text-align: center;
+    margin-top: 30px;
+}
+.list .toptitle {
+    text-align: center;
+}
+.list .theList {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+} 
+.list .theList .box {
+    position: relative;
+    min-width: 350px;
+    height: 480px;
+    transition: 0.5s;
+    margin: 10px;
+    text-decoration: none;
+}
+.list .theList:hover .box {
+    opacity: 0.2;
+}
+.list .theList .box:hover {
+    opacity: 1;
+}
+
+.list .theList .box .imgBox {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.list .theList .box .content {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    align-items: center;
+}
+.list .theList .box .content h2 {
+    color: white;
+    font-weight: 500;
+    line-height: 1.2em;
+    font-family: 'Raleway', sans-serif;
+}
+.list .theList .box .content h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1em;
+    opacity: 0.5;
+}
+
+
+.clwLine {
+    background-color: black;
+    position: relative;
+    width: 100%;
+    min-height:60vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.clwLine .incontainer p {
+    font-size: medium;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.clwLine .incontainer {
+    display: flex;
+    position: relative;
+}
+
+.clwLine:hover .clwLine.cover{
+    opacity: 0;
+}
+#myChart {
+    position: absolute;
+    top: 200px;
+}
+
+.dataGroup {
+    position: relative;
+    width:100%;
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dataGroup .theList {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.dataGroup .theList .box {
+    position: relative;
+    min-width: 350px;
+    height: 350px;
+    transition: 0.5s;
+    margin: 10px;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.dataGroup .theList .box:hover {
+    opacity: 1;
+}
+
+.dataGroup .theList .box .imgBox {
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+.dataGroup .theList .box .content {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    align-items: center;
+}
+.dataGroup .theList .box .content h2 {
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 100;
+    line-height: 1.2em;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 10px;
+}
+.dataGroup .datacover {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.datanav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	opacity: .85;
+	overflow-x: hidden;
+	padding-top: 60px;
+    transition: 0.7s;
+    display: inline-block;
+    font-size: 0;
+    transition: 1s;
+}
+.datanav a {
+    z-index: 100;
+	display: block;
+	padding: 20px 30px;
+	
+	text-decoration: none;
+    color:white;
+    opacity: 1.0;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.datanav a:hover {
+    color: white;
+    background-color: black;
+    opacity: 1;
+    transition: 0.4s;
+    
+}
+.datanav .close {
+	position: absolute;
+	top: 0;
+    left: 5px;
+    font-size: 30px;
+}
+
+#data {
+	padding: 20px;
+	transition: margin-left 0.7s;
+	overflow: hidden;
+    width: 100%;
+}

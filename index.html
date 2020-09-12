@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+    <head>
+        <meta charset = "utf-8">
+        <title>Hack the Bay Report Card</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,500&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+        <script>
+            function openSlideMenu(){
+              document.getElementById('menu').style.width = '250px';
+              document.getElementById('slide').style.opacity = '0';
+              document.getElementById('menu').style.fontSize = '1.5vw';
+            }
+            function closeSlideMenu(){
+              document.getElementById('menu').style.width = '0';
+              document.getElementById('slide').style.opacity = '1';
+              document.getElementById('menu').style.fontSize = '0';
+            }
+            mybutton = document.getElementById("myBtn");
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+          </script>
+    </head>
+    <body>
+        <section class ="top">
+            <div class="ti">Hack the Bay</div>
+            <div id="content">
+                <span id="slide">
+                  <a onclick="openSlideMenu()">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                </span>            
+                <div id="menu" class="nav">
+                  <a href="#" class="close" onclick="closeSlideMenu()">
+                    <i class="fas fa-times"></i>
+                  </a>
+                  <a href="index.html">Main</a>
+                  <a href="basicInfo.html">Basic Info</a>
+                  <a href="impact.html">Impact</a>
+                  <a href="data.html">Data Report</a>
+                  <a href="restoration.html">Restoration</a>
+                </div>
+              </div>
+        </section>
+        <section class = subtop>
+            <img class="indexPic" src="/image/c3.jpg">
+            <img class="cover" src="/image/blackbg.jpg">
+            <div class="title">D.C. Potomac River Water Quality Report Card</div>
+        </section>
+        <section class ="about">
+            <div class="contentbox">
+                <h2 class= "titleText">Threats to the watershed</h2>
+                <p class = "text">
+                    Human activities are disrupting and degrading many of the ecological and economic services provided 
+                    by freshwater rivers, lakes, and wetlands. Since 1960, the Chesapeake Bay—the largest 
+                    estuary in the United States—has been in serious trouble from water pollution, mostly because of human activities. 
+                </p>
+                <a href="basicInfo.html" class ="btn">Learn more</a>
+            </div>
+            <div class="imageBx">
+                <img class="indexPic" src="/image/waste1.jpg">
+            </div>
+        </section>
+        <section class = "banner">
+            <img src="/image/priver.jpg" class = "indexPic">
+        </section>
+
+        <section class = "list">
+            <div class="toptitle">
+                <h2 class="titleText">D.C. Potomac River Detail</h2>
+                <p class="text">You can find more detail through the list below</p>
+            </div>
+            <div class="theList">
+                <a href="data.html" class = "box">
+                    <div class="imgBox">
+                        <img src="/image/data.jpg" class = "indexPic">
+                    </div>
+                    <div class="content">
+                        <h2>Data Report<br><span>Water Quality</span></h2>
+                    </div>
+                </a>
+                <a href="restoration.html" class = "box">
+                    <div class="imgBox">
+                        <img src="/image/envpro.jpg" class = "indexPic">
+                    </div>
+                    <div class="content">
+                        <h2>Environmental Restoration<br><span>What you can do to help!</span></h2>
+                    </div>
+                </a>
+                <a href="impact.html" class = "box">
+                    <div class="imgBox">
+                        <img src="/image/envimp.jpg" class = "indexPic">
+                    </div>
+                    <div class="content">
+                        <h2>Environmental Impacts<br><span>How is it affecting you?</span></h2>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <button onclick="topFunction()" id="topBtn" title="Go to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+    <head>
+        <meta charset = "utf-8">
+        <title>Restoration</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,500&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+        <script>
+            function openSlideMenu(){
+              document.getElementById('menu').style.width = '250px';
+              document.getElementById('slide').style.opacity = '0';
+              document.getElementById('menu').style.fontSize = '1.5vw';
+            }
+            function closeSlideMenu(){
+              document.getElementById('menu').style.width = '0';
+              document.getElementById('slide').style.opacity = '1';
+              document.getElementById('menu').style.fontSize = '0';
+            }
+            mybutton = document.getElementById("myBtn");
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+            function openTheMenu(){
+              document.getElementById('datamenu').style.width = '400px';
+              document.getElementById('datamenu').style.opacity = '1';
+              document.getElementById('theslide').style.opacity = '0';
+              document.getElementById('datamenu').style.fontSize = '1.5vw';
+            }
+            function closeTheMenu(){
+              document.getElementById('datamenu').style.width = '0';
+              document.getElementById('theslide').style.opacity = '1';
+              document.getElementById('datamenu').style.opacity = '0';
+              document.getElementById('datamenu').style.fontSize = '0';
+            }
+          </script>
+    </head>
+    <body>
+        <section class = top>
+            <div class="ti">Hack the Bay</div>
+            <div id="content">
+                <span id="slide">
+                  <a onclick="openSlideMenu()">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                </span>            
+                <div id="menu" class="nav">
+                  <a href="#" class="close" onclick="closeSlideMenu()">
+                    <i class="fas fa-times"></i>
+                  </a>
+                  <a href="index.html">Main</a>
+                  <a href="basicInfo.html">Basic Info</a>
+                  <a href="impact.html">Impact</a>
+                  <a href="data.html">Data Report</a>
+                  <a href="restoration.html">Restoration</a>
+                </div>
+              </div>
+              <span id="theslide">
+                <button onclick="openTheMenu()" id="dataBtn" title="Open Side Menu">
+                  <i class="fas fa-times"></i>
+                </button>
+              </span>            
+              <div id="datamenu" class="datanav">
+                <a class="close" onclick="closeTheMenu()">
+                  <i class="fas fa-times"></i>
+                </a>
+                <a href="#tea" id="dataA" onclick="closeTheMenu()">Take Everyday Actions</a>
+                <a href="#v" id="dataA" onclick="closeTheMenu()">Volunteer in your Community</a>
+              </div>
+        </section>
+        <section class = subtop>
+          <img class="indexPic" src="/image/er1.jpg">
+          <img class="cover" src="/image/blackbg.jpg">
+          <div class="title">Environmental Restoration</div>
+      </section>
+      <section class="restorationtop">
+        <h1 class="mtitle">Ways you can help</h1>
+      </section>
+      <section class="restorationgroup">
+        <div class="content">
+          <h1>
+            Understand your drinking source
+          </h1>
+          <a href="https://www.dcwater.com/sites/default/files/documents/2020_dcwater_water_quality_report_0.pdf" target="_blank" class ="btn">Learn more</a>
+        </div>
+        <div class="imageBx">
+          <img class="indexPic" src="/image/dcr1.png">
+        </div>
+      </section>
+      <section class="restorationtop" id="tea">
+        <h1 class="mtitle">Take Everyday Actions</h1>
+        <img src="/image/tea1.jpeg" class="indexPic" alt="">
+      </section>
+      <section class="restorationgroup">
+        <div class="smallcontent">
+          <h1>
+            Use and Dispose of Harmful Materials Properly
+          </h1>
+        </div>
+          <div class='secondcontent'>
+            <p>Don't pour hazardous waste down the drain, on the ground, or into storm sewers. This could contaminate the soil, groundwater, or nearby surface water.</p>
+            <span>"</span>
+            <p>A number of products used at home contain hazardous or toxic substances that can contaminate ground or surface waters, such as:
+              <ul>
+                <li>Motor oil</li>
+                <li>Pesticides</li>
+                <li>Leftover paints or paint cans</li>
+                <li>othballs</li>
+                <li>Flea collars</li>
+                <li>Household cleaners</li>
+                <li>A number of medicines</li>
+              </ul>
+            </p>
+          </div>
+      </section>
+      <section class="restorationgroup">
+        <div class="smallcontent">
+          <h1>
+            Think Twice about Lawn and Garden Chemicals
+          </h1>
+          <span>"</span>
+          <p>Limit the use of pesticides or fertilizers, and always follow the label directions. Many fertilizers and pesticides contain harmful chemicals which can travel through the soil and contaminate groundwater or run off in stormwater to rivers, streams, and lakes.</p>
+        </div>
+        <div class="imageBx">
+          <img class="indexPic" src="/image/fl1.jpg">
+        </div>
+      </section>
+      <section class="restorationgroup">
+        <div class="imageBx">
+          <img class="indexPic" src="/image/sp1.jpg">
+        </div>
+        <div class="smallcontent">
+          <h1>
+            Properly Maintain Your Septic System
+          </h1>
+          <ul>
+            <li>Groundwater can be contaminated by poorly or untreated household wastewater, which poses dangers to drinking water and to the environment. </li>
+            <li>Malfunctioning septic systems release bacteria, viruses, and chemicals to local aquifers and waterways.</li>
+            <li>The average household septic system should be inspected at least every three years by a septic service professional. </li>
+            <li>Household septic tanks are typically pumped every three to five years. </li>
+          </ul>
+        </div>
+        
+      </section>
+      <section class="restorationtop" id="v">
+        <h1 class="mtitle">Volunteer in Your Community</h1>
+        <img src="/image/vl1.jpeg" class="indexPic" alt="">
+      </section>
+      <section class="restorationgroup">
+        <div class="smallcontent">
+          <ul>
+            <li>Find or Start a Group</li>
+            <li>Join in a Beach, Stream, or Wetland Cleanup</li>
+            <li>Prepare a Presentation about Your Watershed for a School or Civic Organization </li>
+            <li>Put Up Signs </li>
+            <li>Organize a Storm Drain Stenciling Project</li>
+          </ul>
+        </div>
+          <div class='secondcontent'>
+            <p>Stencil a message next to the street drain. This reminds people not to dump waste into a street drain, which leads to local water sources such as rivers.  Use simple images and words when stenciling to help make the connection, such as: 
+              <ul>
+                <li>Fish</li>
+                <li>Streams</li>
+                <li>Lakes</li>
+                <li>Groundwater</li>
+                <li>Bays</li>
+                <li>Ocean"Protect Your Water" logo with the image of a glass and faucet </li>
+              </ul>
+            </p>
+          </div>
+      </section>
+      <button onclick="topFunction()" id="topBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    </body>
+
+</html>
